@@ -1,0 +1,29 @@
+html, body {
+    font-family: 'Space Mono', monospace;
+}
+
+.Boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px dotted red;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    width: 25%;
+    margin-left: 4.5rem ;
+}
+
+.card img {
+    padding: 1rem 0;
+    align-self: center;
+    width: 50%;
+}
