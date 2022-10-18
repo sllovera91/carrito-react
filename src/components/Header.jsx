@@ -1,4 +1,4 @@
-import { AppBar, Toolbar } from "@mui/material"
+import { AppBar, Toolbar, Typography } from "@mui/material"
 
 
 export const Header = () => {
@@ -6,7 +6,7 @@ export const Header = () => {
       <AppBar position='fixed'>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between'}}>
           <div className="Logo">
-            <h3>Santiago Carrito</h3>
+            <Typography variant='h6'>Santiago Carrito</Typography>
           </div>
           <div className="Usuario">
             <p>Bienvenido: Usuario</p>

@@ -15,5 +15,5 @@ html, body {
 img {
     padding: 1rem 0;
     align-self: center;
-    width: 25%;
+    max-width: 50%;
 }
