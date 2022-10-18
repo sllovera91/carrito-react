@@ -1,18 +1,34 @@
-import { Button  } from "@mui/material"
+import axios from "axios"
+import { Button, Box, Grid  } from "@mui/material"
+
+
+const getProducts = async() => {
+  const peticion = await axios.get('https://fakestoreapi.com/products')
+  console.log(peticion.data)
+}
+
+getProducts();
+
 
 export const Producto = () => {
+
+
   return (
-      <div className="card">
-          <h2> Nombre del producto</h2>
-          <hr/>
-          <img src="https://img.freepik.com/vector-gratis/pelota-futbol-dibujado-mano_1034-741.jpg?w=2000" alt="" srcset="" />
-          <p>Precio</p>
+    <Grid item xs={12} sm={3}>
+      <Box sx={{ borderStyle: 'dotted' }}>  
+            <h2> Hola </h2>
+            <img src="https://img.freepik.com/vector-gratis/pelota-futbol-dibujado-mano_1034-741.jpg?w=2000" alt=""/>
+            <p>price</p>
           <div className="Boton">
-            <Button   size="small"> <i class="fa-solid fa-plus"></i> </Button>
+            <Button   size="small"> <i className="fa-solid fa-plus"></i> </Button>
             <p>Cantidad: 0</p>
-            <Button   size="small"> <i class="fa-solid fa-minus"></i> </Button>
+            <Button   size="small"> <i className="fa-solid fa-minus"></i> </Button>
           </div>
-      </div>
+          
+      </Box>
+    </Grid>
 
   )
 }
+
+

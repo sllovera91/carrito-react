@@ -1,19 +1,30 @@
-import { Container } from "@mui/material"
+import { Container, Grid, Box } from "@mui/material"
 import { Producto } from "../components/Producto"
 
+import { useEffect, useState } from "react"
+import { totalProductos } from "../helpers/useAxios"
 
 export const Inicio = () => {
-  return (
-    <Container maxWidth="fixed" sx={{ display: 'flex', mt: 12, justifyContent: 'space-between' }}>
-        <div>
-            <Producto />
-            <Producto />
-            <Producto />
-            <Producto />
-            <Producto />
-            <Producto />
+  const [productos, setProductos] = useState(null)
 
-        </div>
-    </Container>
+
+  useEffect(() => {
+    totalProductos(setProductos)
+  }, [])
+
+
+  return (
+    <Box sx={{ mt: 13 }}>
+      <Container maxWidth="lg">
+        <Grid container spacing={5}>
+        { productos != null ? 
+          productos.map( (product) => (
+            <Producto key={product}>
+            </Producto>
+          ))
+          : ('No hay personajes')}
+        </Grid>
+      </Container>
+    </Box>
   )
 }
