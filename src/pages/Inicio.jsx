@@ -22,7 +22,7 @@ export const Inicio = () => {
             <Producto key={product}>
             </Producto>
           ))
-          : ('No hay personajes')}
+          : ('Cargando')}
         </Grid>
       </Container>
     </Box>
