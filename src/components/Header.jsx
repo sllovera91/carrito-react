@@ -9,7 +9,7 @@ export const Header = () => {
             <Typography variant='h6'>Santiago Carrito</Typography>
           </div>
           <div className="Usuario">
-            <p>Bienvenido: Usuario</p>
+          <Typography >Bienvenido: Usuario</Typography>
           </div>
         </Toolbar>
       </AppBar>
