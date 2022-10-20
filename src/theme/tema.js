@@ -11,6 +11,6 @@ export const tema = createTheme({
         },
         error: {
             main: red.A400
-        }
+        },
     }
 })

@@ -1,4 +1,5 @@
 import { AppBar, Toolbar, Typography } from "@mui/material"
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 export const Header = () => {
@@ -9,7 +10,10 @@ export const Header = () => {
             <Typography variant='h6'>Santiago Carrito</Typography>
           </div>
           <div className="Usuario">
-          <Typography >Bienvenido: Usuario</Typography>
+          <Typography>
+          <ShoppingCartIcon sx={{ mr: 1 }} />
+            0
+          </Typography>
           </div>
         </Toolbar>
       </AppBar>

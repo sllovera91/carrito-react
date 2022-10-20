@@ -2,62 +2,40 @@ html, body {
     font-family: 'Space Mono', monospace;
 }
 
-.Boton {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    justify-content: space-between;
-    border-top: 1px dotted black;
-}
-.BotonModal {
-    display: flex;
-    justify-content: space-between;
-}
-
 
 img {
     padding: 1rem 0;
     align-self: center;
-    max-width: 50%;
-}
-/* Modal */
-.ReactModalPortal > div{
-    opacity: 0;
-}
-
-.ReactModalPortal .ReactModal__Overlay {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    transition: opacity .2s ease-in-out;
-    z-index: 999;
+    width:  70%;
+    height: 70%;
+    object-fit: contain;
+    
 }
 
-.modal-fondo {
-    background-color: rgba(0, 0, 0, 0.3);
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    position: fixed;
+.Loader {
+    text-align: center;
+    margin: 17rem 0;
 }
 
-.ReactModalPortal .ReactModal__Overlay--after-open {
-    opacity: 1;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-.ReactModalPortal .ReactModal__Overlay--before-close {
-    opacity: 0;
+.Footer {
+    text-align: center;
+    background-color: #F96167;
+    text-color: #FFFFFF
+    position: absolute;
+    width: 100%;
+
 }
 
-.modal {
-    background: white;
-    border-radius: 5px;
-    color: rgb(51, 51, 51);
-    display: inline;
-    max-height: 620px;
-    max-width: 500px;
-    outline: none;
-    padding: 10px;
+.Icons i {
+    padding: 0.5rem 0.5rem;
+    
+}
+.Icons a {
+    color: #FFFFFF; 
+   
 }

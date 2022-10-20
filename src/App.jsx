@@ -1,25 +1,28 @@
-import {BrowserRouter, Routes, Route } from 'react-router-dom'
+// import {BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { AppTheme } from './theme/AppTheme';
-import { Header } from './components/Header';
-import { Inicio } from './pages/Inicio';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
+
+import { Inicio } from './pages/Inicio';
+import { Header } from './components/Header';
+import { Productos } from './pages/Productos';
+import { Footer } from './components/Footer';
+
 import './styles.css';
+
 
 
 export const App = () => {
 
-  
 
   return (
     <Provider store={ store }>
       <AppTheme>
-        <BrowserRouter>
             <Header />
             <Inicio />
-        </BrowserRouter>    
+            <Footer />
       </AppTheme>
-    </Provider>
+    </Provider> 
   )
 }
 

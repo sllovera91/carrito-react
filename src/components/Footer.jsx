@@ -1,65 +1,19 @@
-import { Container, Grid, Box, Link } from "@mui/material"
-
+import { Box, Typography } from "@mui/material"
 
 export const Footer = () => {
   return (
-    //   <Container maxWidth='lg'>
-    //     <Grid container spacing={5}> 
-    //       <Grid item xs={12} sm={4}>
-    //         <Box borderBottom={1}>Inicio</Box>
-    //         <Box>
-    //           <Link href="/" color='inherit'>
-    //           Contact
-    //           </Link>
-    //         </Box>
-    //         <Box>
-    //           <Link href="/" color='inherit'>
-    //           Contact
-    //           </Link>
-    //         </Box>
-    //         <Box>
-    //           <Link href="/" color='inherit'>
-    //           Contact
-    //           </Link>
-    //         </Box>
-    //       </Grid>
-    //       <Grid item xs={12} sm={4}>
-    //         <Box borderBottom={1}>Inicio</Box>
-    //         <Box>
-    //           <Link href="/" color='inherit'>
-    //           Contact
-    //           </Link>
-    //         </Box>
-    //         <Box>
-    //           <Link href="/" color='inherit'>
-    //           Contact
-    //           </Link>
-    //         </Box>
-    //         <Box>
-    //           <Link href="/" color='inherit'>
-    //           Contact
-    //           </Link>
-    //         </Box>
-    //       </Grid>
-    //       <Grid item xs={12} sm={4}>
-    //         <Box borderBottom={1}>Inicio</Box>
-    //         <Box>
-    //           <Link href="/" color='inherit'>
-    //           Contact
-    //           </Link>
-    //         </Box>
-    //         <Box>
-    //           <Link href="/" color='inherit'>
-    //           Contact
-    //           </Link>
-    //         </Box>
-    //         <Box>
-    //           <Link href="/" color='inherit'>
-    //           Contact
-    //           </Link>
-    //         </Box>
-    //       </Grid>
-    //     </Grid>
-    //   </Container>
+    <>
+            <Box className="Footer" >
+              <div className='Icons'>
+                <a href=""><i className="fa-brands fa-github"></i></a>
+                <a href=""><i className="fa-brands fa-linkedin"></i></a>
+                <a href=""><i className="fa-brands fa-whatsapp"></i> </a>
+                <a href=""><i className="fa-solid fa-envelope"></i></a>
+              </div>
+              <Typography variant='p' color={'white'}>Santiago Llovera - 2022</Typography>
+            </Box>
+
+    </>
+
   )
 }
