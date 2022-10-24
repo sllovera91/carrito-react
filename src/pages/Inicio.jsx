@@ -1,4 +1,5 @@
 import { Container, Grid, Box, Button, Typography, CircularProgress } from "@mui/material"
+import { Link } from "react-router-dom";
 import { useGetProductosQuery } from "../store/api/productosApi"
 
 export const Inicio = ( ) => {
@@ -23,9 +24,9 @@ export const Inicio = ( ) => {
               height: '100%'                                  
         }}>
               <Typography variant='p'><a href={`/Productos/${product.id}`}>{}</a></Typography>
-              <img src={product.image} alt=""/>
-              <h4>${product.price}</h4>
-              <small> { product.title.length > 20 ? product.title.substring(0,20) + '...' : product.title} </small>
+              <Link to={`/Productos/${product.id}`}><img src={product.image} alt=""/></Link>
+              <Link to={`/Productos/${product.id}`}><h4>${product.price}</h4></Link>
+              <small style={{fontWeight: 'bold'}}> <Link to={`/Productos/${product.id}`}>{ product.title.length > 20 ? product.title.substring(0,20) + '...' : product.title} </Link></small>
               <div className="Boton">
                 <Button variant='contained' size="small"> <i className="fa-solid fa-cart-plus"></i>    Agregar al carrito </Button>
               </div>

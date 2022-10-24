@@ -22,6 +22,10 @@ a {
     color: black;
 }
 
+.Boton {
+    margin-top: 1rem;
+}
+
 .Footer {
     text-align: center;
     background-color: #F96167;
@@ -39,3 +43,40 @@ a {
     color: #FFFFFF; 
    
 }
+
+.ProductBox {
+    display: flex;
+    justify-content: center;
+}
+
+.Productos {
+    width: 33%;
+    margin: 2rem 2rem;
+}
+
+.Boton2 {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 600px) {
+    .ProductBox {
+        width: 80%;
+        margin: 2rem 2rem;
+    }
+
+    .Boton2 {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .Boton2 Button {
+        margin: 1rem 0rem;
+    }
+
+    .ProductBox img {
+        width: 100%;
+    }
+  }
