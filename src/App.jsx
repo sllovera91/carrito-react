@@ -6,10 +6,13 @@ import { store } from './store/store';
 
 import { Inicio } from './pages/Inicio';
 import { Header } from './components/Header';
+import { Carrito } from './pages/Carrito';
 import { Productos } from './pages/Productos';
 import { Footer } from './components/Footer';
 
-
+import { ToastContainer } from 'react-toastify';  
+ 
+import 'react-toastify/dist/ReactToastify.css'
 import './styles.css';
 
 
@@ -22,12 +25,13 @@ export const App = () => {
     <Provider store={ store }>
       <AppTheme>
         <BrowserRouter>
+          <ToastContainer />
               <Header />
               <Routes>
-                <Route path='/' element={ <Inicio /> }></Route>
-                <Route path='/Productos/:id' element={ <Productos /> }></Route>
+                <Route path='/' element={ <Inicio /> } />
+                <Route path='/Productos/:id' element={ <Productos /> } />
+                <Route path='/Carrito' element={ <Carrito /> } />
               </Routes>
-              <Footer />
         </BrowserRouter>
       </AppTheme>
     </Provider> 

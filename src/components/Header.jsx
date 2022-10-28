@@ -1,8 +1,15 @@
 import { AppBar, Toolbar, Typography } from "@mui/material"
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 
 export const Header = () => {
+
+  const carrito = useSelector( state => state.market)
+  
+
+  
   return (
       <AppBar position='fixed'>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between'}}>
@@ -11,8 +18,10 @@ export const Header = () => {
           </div>
           <div className="Usuario">
           <Typography>
-          <ShoppingCartIcon sx={{ mr: 1 }} />
-            0
+          <Link to={'/Carrito'} >
+            <ShoppingCartIcon sx={{ mr: 1 }}   />  
+            {carrito.marketItems.length * carrito.marketItems.length}
+          </Link>
           </Typography>
           </div>
         </Toolbar>
