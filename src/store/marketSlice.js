@@ -14,9 +14,9 @@ export const marketSlice = createSlice({
         agregarAlCarrito: (state, { payload }) => {
             const itemIndex = state.marketItems.findIndex( item => item.id === payload.id );
             if(itemIndex >= 0){
-              state.marketItems[itemIndex].marketCantidad += 1 // Cambiar por ++ y un ternario
+              state.marketItems[itemIndex].marketCantidad += 1 
             }else {
-              const tempMarket = {...payload, marketCantidad: 1  } // Ver con fernando para cambiar esto y aprovechar el codigo mutante
+              const tempMarket = {...payload, marketCantidad: 1  } 
               state.marketItems.push(tempMarket);
               toast.success(`Agregaste ${payload.title} al carrito`, {
                 position: 'bottom-left'
