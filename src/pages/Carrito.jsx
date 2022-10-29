@@ -1,8 +1,9 @@
 import { Box, Button, Typography } from "@mui/material" 
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { Footer } from "../components/Footer";
-import { agregarAlCarrito, eliminarCarrito, limpiarCarrito } from "../store/marketSlice";
+import { agregarAlCarrito, eliminarCarrito, limpiarCarrito , precioFinal, reducirCarrito } from "../store/marketSlice";
 
 
 export const Carrito = () => {
@@ -22,7 +23,15 @@ export const Carrito = () => {
         dispatch(eliminarCarrito(producto))
       }
 
-    
+      const decrecerProducto = (producto) => {
+        dispatch(reducirCarrito(producto))
+      }
+
+      useEffect(() => {
+        dispatch(precioFinal())
+      }, [carrito])
+      
+         
 
   return (
     
@@ -60,7 +69,7 @@ export const Carrito = () => {
                 </div>
                 <div className="carrito-producto-precio">${producto.price}</div>
                 <div className="carrito-producto-cantidad">
-                  <Button>
+                  <Button  onClick={ () => {decrecerProducto(producto)}}>
                     -
                   </Button>
                   <div className="count">{producto.marketCantidad}</div>
@@ -79,7 +88,7 @@ export const Carrito = () => {
           <div className="carrito-checkout">
             <div className="total">
               <span>Subtotal</span>
-              <span className="monto">${carrito.marketTotal}</span>
+              <span className="monto">{carrito.marketTotalPrecio}</span>
             </div>
             <Button sx={{ mt: 2, width: '100%' }}variant='contained'>Comprar</Button>
             <Link to='/'>

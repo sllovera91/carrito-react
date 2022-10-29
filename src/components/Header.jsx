@@ -6,7 +6,8 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 export const Header = () => {
 
-  const carrito = useSelector( state => state.market)
+  const { marketTotalCantidad } = useSelector( state => state.market)
+
   
 
   
@@ -20,7 +21,7 @@ export const Header = () => {
           <Typography>
           <Link to={'/Carrito'} >
             <ShoppingCartIcon sx={{ mr: 1 }}   />  
-            {carrito.marketItems.length * carrito.marketItems.length}
+            Ir al Carrito !
           </Link>
           </Typography>
           </div>

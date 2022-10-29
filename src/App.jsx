@@ -20,7 +20,6 @@ import './styles.css';
 export const App = () => {
 
 
-
   return (
     <Provider store={ store }>
       <AppTheme>
